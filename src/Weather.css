@@ -27,8 +27,9 @@
   font-size: 16px;
 }
 
-.Weather img {
-  height: 100px;
+.Weather canvas {
+  height: 64px;
+  margin: 7px;
 }
 
 .Weather .temperature {

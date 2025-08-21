@@ -19,7 +19,7 @@ export default function Weather(props) {
       newDate: new Date(response.data.dt * 1000),
       feels: response.data.temperature.feels_like,
       wind: response.data.wind.speed,
-      icon: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
+      icon: response.data.condition.icon,
     });
   } 
   
