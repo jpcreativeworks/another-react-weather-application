@@ -17,7 +17,7 @@ export default function WeatherInfo(props) {
             <div className="d-flex align-items-center">
               <WeatherIcon code={props.data.icon} alt={props.data.condition} size={64}/>
             <div className="d-flex align-items-baseline">
-              <WeatherTemperature celcius={props.data.temperature} />
+              <WeatherTemperature celsius={props.data.temperature} unit={props.unit} onUnitChange={props.onUnitChange}/>
             </div>
             </div>
           </div>
