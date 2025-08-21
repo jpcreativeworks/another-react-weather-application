@@ -4,7 +4,7 @@ import WeatherIcon from "./WeatherIcon"
 export default function WeatherForecastDay({data, unit}) {
   const toUnit = (c) => (unit === "c" ? c : (c * 9) / 5 + 32)
   let max = Math.round(toUnit(data.temperature.maximum));
-  let min = Math.round(toUnit(data.temperature.maximum));
+  let min = Math.round(toUnit(data.temperature.minimum));
     
 
   const dayName = (() => {
@@ -18,7 +18,7 @@ export default function WeatherForecastDay({data, unit}) {
       <div className="WeatherForecast-temperatures">
         <span className="WeatherForecast-temperatures-max">
           {max}°{unit === "c" ? "C" : "F"}
-        </span>{" "}
+        </span>{" "}<br />
         <span className="WeatherForecast-temperatures-min">
           {min}°{unit === "c" ? "C" : "F"}
         </span>
